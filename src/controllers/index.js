@@ -3,7 +3,7 @@ const axios = require ('axios');
 const {Recipe, Diet} = require ('../db.js');
 const {API_KEY} = process.env;
 //const recetas = require ('../../../data/recetas.json')
-//console.log(API_KEY)
+console.log(API_KEY)
 const getDbInfo = async () => {
    return await Recipe.findAll({
        include:{
@@ -19,7 +19,7 @@ const getDbInfo = async () => {
 const getAllRecipes = async (req, res, next) => {
     const {title} = req.query
     try{
-   const apiInfo= /*recetas; */await axios.get(`https://api.spoonacular.com/recipes/complexSearch?apiKey=${API_KEY}&addRecipeInformation=true&number=10`)
+   const apiInfo= /*recetas; */await axios.get(`https://api.spoonacular.com/recipes/complexSearch?apiKey=922adc339a584c67a03510db6e01cd48&addRecipeInformation=true&number=10`)
    const infoGet = apiInfo.data.results.map(el=>{
   /* const infoGet = apiInfo.results.map(el=>{*/
        return{

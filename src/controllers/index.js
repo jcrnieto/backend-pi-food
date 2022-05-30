@@ -100,7 +100,7 @@ const getIdRecipes = async (req, res, next) => {
 
 const getAllTypes = async (req, res, next) => {
   //const diet = ["gluten free", "dairy free", "lacto ovo vegetarian", "vegan", "pescatarian", "paleolithic", "primal","fodmap friendly", "whole 30", "ketogenic", "paleo"]
-   const apiInfo =  await axios.get(`https://api.spoonacular.com/recipes/complexSearch?apiKey=922adc339a584c67a03510db6e01cd48s&addRecipeInformation=true&number=10`)
+   const apiInfo =  await axios.get(`https://api.spoonacular.com/recipes/complexSearch?apiKey=922adc339a584c67a03510db6e01cd48&addRecipeInformation=true&number=10`)
    //console.log('estoy en apiinfo', apiInfo)
    const diets = apiInfo.data.results.map(el=>el.diets)
    const diet = diets.flat()

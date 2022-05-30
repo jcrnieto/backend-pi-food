@@ -7,7 +7,7 @@ const { getAllRecipes, getIdRecipes, getAllTypes, postCreateRecipe } = require (
 const router = Router();
 
 // Configurar los routers
-// Ejemplo: router.use('/auth', authRouter);
+// Ejemplo: router.use('/auth', authRouter);dfd
 router.get('/recipes', getAllRecipes)
 
 router.get('/recipes/:id', getIdRecipes)
